@@ -4,7 +4,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
-    "postinstall": "cd ./frontend && echo yay"
+    "heroku-postbuild": "cd ./frontend && npx next build && npx next export -o ../public",
+    "postinstall": "echo yay"
   }
 }
