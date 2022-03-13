@@ -5,13 +5,5 @@
   },
   "scripts": {
     "postinstall": "cd ./frontend && npm install && npx next build && npx next export -o ../public"
-  },
-  "dependencies": {
-    "next": "^12.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/react": "^17.0.40",
-    "typescript": "^4.6.2"
   }
 }
