@@ -4,7 +4,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "postinstall": "npm --prefix ./frontend install ./frontend && npm --prefix ./frontend run build"
+    "postinstall": "cd ./frontend && npm install && npx next build && npx next export -o ../public"
   },
   "dependencies": {
     "next": "^12.1.0"
