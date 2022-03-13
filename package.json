@@ -4,7 +4,6 @@
     "node": "16.x"
   },
   "scripts": {
-    "heroku-postbuild": "cd ./frontend && npx next build && npx next export -o ../public",
-    "postinstall": "echo yay"
+    "postinstall": "cd ./frontend && npm install && npx next build && npx next export -o ../public"
   }
 }
