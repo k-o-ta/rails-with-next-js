@@ -4,10 +4,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "build": "this is build",
-    "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
     "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
-    "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies.",
-    "postinstall": "cd ./frontend && echo yay && npx next build && npx next export -o ../public"
+    "postinstall": "cd ./frontend && echo yay"
   }
 }
