@@ -1,0 +1,9 @@
+{
+  "name": "rails-with-next-js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "postinstall": "cd ./frontend && npx && npx next build && npx next export -o ../public"
+  }
+}
