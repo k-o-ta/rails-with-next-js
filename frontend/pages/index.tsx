@@ -2,8 +2,23 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
+  const [isLoading, setLoading] = useState(false)
+  const [data, setData] = useState<any>(null)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('students').then((res) => res.json()).then((data) => {
+      console.log(data)
+      setLoading(false)
+      setData(data)
+    })
+  }, [])
+  if (isLoading) return <p>Loading</p>
+  if (!data) return <p>No profile data</p>
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +31,10 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <p>
+          {data.student.name}
+        </p>
 
         <p className={styles.description}>
           Get started by editing{' '}
