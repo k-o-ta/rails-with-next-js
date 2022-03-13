@@ -4,6 +4,6 @@
     "node": "16.x"
   },
   "scripts": {
-    "postinstall": "cd ./frontend && npx && npx next build && npx next export -o ../public"
+    "postinstall": "cd ./frontend && echo yay && npx && npx next build && npx next export -o ../public"
   }
 }
